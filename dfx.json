@@ -1,0 +1,34 @@
+{
+  "canisters": {
+    "hackathon": {
+      "main": "src/hackathon/main.mo",
+      "type": "motoko"
+    },
+    "hackathon_assets": {
+      "dependencies": [
+        "hackathon"
+      ],
+      "frontend": {
+        "entrypoint": "src/hackathon_assets/public/index.js",
+        "output": "canisters/hackathon_assets/assets"
+      },
+      "source": [
+        "src/hackathon_assets/assets"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "output": "canisters/",
+      "packtool": ""
+    },
+    "start": {
+      "address": "127.0.0.1",
+      "port": 8000,
+      "serve_root": "canisters/hackathon_assets/assets"
+    }
+  },
+  "dfx": "0.5.8",
+  "version": 1
+}
