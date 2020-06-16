@@ -45,6 +45,18 @@ function generateWebpackConfigForCanister(name, info) {
       path: path.join(__dirname, info.frontend.output),
     },
     plugins: [],
+    module: {
+      rules: [
+        {
+          test: /\.css$/,
+          use: ["style-loader", "css-loader"],
+        },
+        {
+          test: /\.(jpe?g|png|ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+          use: "base64-inline-loader?name=[name].[ext]",
+        },
+      ],
+    },
   };
 }
 // If you have webpack configurations you want to build as part of this

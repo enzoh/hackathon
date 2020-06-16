@@ -1,5 +1,22 @@
-import hackathon from 'ic:canisters/hackathon';
+import hackathon from "ic:canisters/hackathon";
+import assets from "ic:canisters/hackathon_assets";
+import { generate, load, show, hide, update, bind } from "./utils";
+import "./index.css";
 
-hackathon.greet(window.prompt("Enter your name:")).then(greeting => {
-  window.alert(greeting);
-});
+assets
+  .retrieve("index.html")
+  .then(load)
+  .then(async () => {
+    const lists = await hackathon.getLists();
+    bind(".generate", "click", generateIdea(lists));
+    bind(".why", "click", () => show("#description"));
+  });
+
+const generateIdea = (lists) => () => {
+  const { idea, description, link } = generate(lists);
+  hide("#splash");
+  hide("#description");
+  show("#results");
+  update("#idea", idea);
+  update("#description", description);
+};
