@@ -1,20 +1,29 @@
 <app>
   <div id="splash">
-    <p>
+    <p id="intro">
       So you're excited about the Internet Computer but can't come up with a
-      killer app idea?
+      killer app idea? Why not build a "Savior App" instead?
     </p>
     <div class="buttons">
-      <button class="generate">Generate Killer App Idea</button>
+      <button class="generate">Generate Savior App Idea</button>
+    </div>
+  </div>
+  <div id="loading" class="hidden">
+    <div class="spinner">
+      <div class="bouncer"></div>
+      <div class="bouncer offset"></div>
     </div>
   </div>
   <div id="results" class="hidden">
     <div id="idea"></div>
     <div id="description" class="hidden"></div>
     <div class="buttons">
-      <button class="why">Why would I build that?</button>
+      <button id="why">Why would I build that?</button>
+      <a id="learn" class="button hidden" href="">Learn more</a>
       <button class="generate">I don't know...</button>
-      <button class="start">I'm ready to get started!</button>
+      <a class="button" href="https://sdk.dfinity.org">
+        I'm ready to get started!
+      </a>
     </div>
   </div>
 </app>

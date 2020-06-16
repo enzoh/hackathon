@@ -1,22 +1,32 @@
 import hackathon from "ic:canisters/hackathon";
 import assets from "ic:canisters/hackathon_assets";
-import { generate, load, show, hide, update, bind } from "./utils";
+import { load, show, get, hide, update, bind } from "./utils";
+import { log } from "./logger";
 import "./index.css";
 
 assets
   .retrieve("index.html")
   .then(load)
   .then(async () => {
-    const lists = await hackathon.getLists();
-    bind(".generate", "click", generateIdea(lists));
-    bind(".why", "click", () => show("#description"));
+    bind(".generate", "click", generateIdea);
+    bind("#why", "click", showDescription);
   });
 
-const generateIdea = (lists) => () => {
-  const { idea, description, link } = generate(lists);
-  hide("#splash");
-  hide("#description");
-  show("#results");
+const generateIdea = async () => {
+  hide("#splash", "#results");
+  show("#loading");
+
+  const logData = await log();
+  const { idea, desc, link } = await hackathon.getIdea(logData);
   update("#idea", idea);
-  update("#description", description);
+  update("#description", desc);
+  get("#learn").href = link;
+
+  hide("#loading", "#description", "#learn");
+  show("#results", "#why");
+};
+
+const showDescription = () => {
+  hide("#why");
+  show("#learn", "#description");
 };

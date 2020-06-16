@@ -1,29 +1,22 @@
-export const load = async (encoded) => {
-  document.getElementById("app").outerHTML = atob(encoded);
+export const load = (encoded) => {
+  get("#app").outerHTML = atob(encoded);
 };
 
-export const generate = (inputs) => {
-  const random = inputs.map(getRandom).map(parseArray);
-  const idea = random.map((obj) => obj.idea).join(" ");
-  const description = random.map((obj) => obj.description).join(" ");
-  const link = random[2].link;
-  return { idea, description, link };
+export const show = (...selectors) =>
+  selectors.forEach((selector) => get(selector).classList.remove("hidden"));
+
+export const hide = (...selectors) =>
+  selectors.forEach((selector) => get(selector).classList.add("hidden"));
+
+export const update = (selector, html) => {
+  get(selector).innerHTML = html;
 };
 
-const getRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];
-const parseArray = (arr) => ({
-  idea: arr[0],
-  description: arr[1],
-  link: arr[2],
-});
-
-export const show = (selector) =>
-  document.querySelector(selector).classList.remove("hidden");
-export const hide = (selector) =>
-  document.querySelector(selector).classList.add("hidden");
-export const update = (selector, html) =>
-  (document.querySelector(selector).innerHTML = html);
 export const bind = (selector, eventName, callback) =>
-  document
-    .querySelectorAll(selector)
-    .forEach((el) => el.addEventListener(eventName, callback));
+  getAll(selector).forEach((el) => el.addEventListener(eventName, callback));
+
+export const get = (selector) => document.querySelector(selector);
+export const getAll = (selector) => document.querySelectorAll(selector);
+
+export const pick = (obj, atts) =>
+  atts.reduce((acc, val) => ({ ...acc, [val]: obj[val] }), {});

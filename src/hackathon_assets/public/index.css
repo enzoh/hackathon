@@ -1,28 +1,37 @@
 html,
 body {
   margin: 0;
-  padding: 1em;
+}
+
+app {
+  display: block;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
   background: black url("./bg.png");
   color: white;
 }
 
 #idea,
-#description {
+#description,
+#intro {
   margin: 1em;
+  max-width: 60em;
   text-align: center;
-  padding: 1em;
-  color: white;
+}
+
+#intro,
+#description {
+  font-size: 24px;
 }
 
 #idea {
-  font-size: 72px;
+  font-size: 12vw;
 }
 
-#description {
-  font-size: 36px;
-}
-
-.hidden {
+.hidden,
+.button.hidden {
   display: none;
 }
 
@@ -34,7 +43,9 @@ body {
   text-align: center;
 }
 
-button {
+button,
+.button {
+  cursor: pointer;
   margin: 1em auto;
   display: inline-block;
   clear: left;
@@ -43,4 +54,39 @@ button {
   background: black;
   color: white;
   padding: 1em 2em;
+  text-decoration: none;
+  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.spinner {
+  width: 25vw;
+  height: 25vw;
+  position: relative;
+  margin: 25vh auto;
+}
+
+.bouncer {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.bouncer.offset {
+  animation-delay: -1s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
 }
