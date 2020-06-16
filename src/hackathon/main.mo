@@ -10,6 +10,11 @@ actor Hackthon {
   flexible let PRNG = MathUtils.Random();
   flexible let Logger = Logging.Logger();
 
+  // `getIdea` selects a random Internet Computer "superpower", type of
+  // software, and a 2030 Sustainable Development Goal from the United Nations,
+  // and combines them into a single idea for a "Savior App". It has to be an
+  // update method and not a query to persist progression of the randomness.
+
   public func getIdea(event : Event) : async Idea {
     let superpower = Ideas.makeIdea(PRNG.sample(Ideas.superpowerList));
     let software = Ideas.makeIdea(PRNG.sample(Ideas.softwareList));
@@ -22,6 +27,8 @@ actor Hackthon {
       link = solution.link;
     }
   };
+
+  // `getLogs` retrieves all the events we've logged so far.
 
   public query func getLogs() : async [Event] {
     Logger.getLogs()

@@ -6,11 +6,15 @@ import "./index.css";
 
 assets
   .retrieve("index.html")
-  .then(load)
+  .then(load) // Load the static HTML and inject it into the DOM.
   .then(async () => {
     bind(".generate", "click", generateIdea);
     bind("#why", "click", showDescription);
   });
+
+// Upon clicking a "generate" button, we show/hide different sections of the
+// page and fire off two requests: first to a third-party to gather logging data
+// and second to acquire the random idea from our canister.
 
 const generateIdea = async () => {
   hide("#splash", "#results");
@@ -25,6 +29,10 @@ const generateIdea = async () => {
   hide("#loading", "#description", "#learn");
   show("#results", "#why");
 };
+
+// We do some more show/hide logic if someone wants a longer description of the
+// randomly-generated idea. This action also unveils a link to the United
+// Nations page for the chosen goal.
 
 const showDescription = () => {
   hide("#why");

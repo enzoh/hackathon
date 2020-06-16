@@ -1,16 +1,16 @@
 {
   "name": "hackathon_assets",
   "version": "0.1.0",
-  "description": "",
+  "description": "A Savior App generator for the Internet Computer",
   "keywords": [],
   "scripts": {
     "build": "webpack"
   },
   "devDependencies": {
     "@dfinity/agent": "/Users/stanleyjones/.cache/dfinity/versions/0.5.8/js-user-library",
-    "base64-inline-loader": "^1.1.1",
-    "css-loader": "^3.6.0",
-    "style-loader": "^1.2.1",
+    "base64-inline-loader": "1.1.1",
+    "css-loader": "3.6.0",
+    "style-loader": "1.2.1",
     "terser-webpack-plugin": "2.2.2",
     "webpack": "4.41.3",
     "webpack-cli": "3.3.10"

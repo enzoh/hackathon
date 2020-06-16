@@ -3,6 +3,10 @@ import Iter "mo:base/Iter";
 import ArrayUtils "./Array";
 
 module {
+
+  // An implementation of the Lagged Fibonacci Generator algorithm for pseudo-
+  // random numbers in Motoko. We provide an initial seed.
+
   public class Random() {
     var sequence : [Nat] = [8,6,7,5,3,0,9];
     var j = 2;

@@ -1,6 +1,8 @@
 module {
   public type Idea = { idea : Text; desc : Text; link : Text; };
 
+  // The idea components are stored in nested arrays for easy editing...
+
   public let superpowerList : [[Text]] = [
     ["Open", "The Internet Computer — like the Internet — is designed to be ownerless and accessible to all."],
     ["Hackproof", "The Internet Computer is cryptographically secure by default and software built on it is guaranteed to run precisely as coded."],
@@ -47,6 +49,8 @@ module {
     ["to sustainably manage forests, combat desertification, halt and reverse land degradation, and halt biodiversity loss.", "Nature is critical to our survival: nature provides us with our oxygen, regulates our weather patterns, pollinates our crops, produces our food, feed and fibre. Human activity has altered almost 75 per cent of the earth’s surface, squeezing wildlife and nature into an ever-smaller corner of the planet.", "https://www.un.org/sustainabledevelopment/biodiversity/"],
     ["to promote just, peaceful and inclusive societies.", "The number of people fleeing war, persecution and conflict exceeded 70 million in 2018, the highest level recorded by the UN refugee agency (UNHCR) in almost 70 years. In 2019, the United Nations tracked 357 killings and 30 enforced disappearances of human rights defenders, journalists and trade unionists in 47 countries.", "https://www.un.org/sustainabledevelopment/peace-justice/"],
   ];
+
+  // ...but we transform them into Idea types to simplify the interface.
 
   public func makeIdea(el : [Text]) : Idea {
     var _link = "";
