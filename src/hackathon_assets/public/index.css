@@ -16,9 +16,12 @@ app {
 #idea,
 #description,
 #intro {
-  margin: 1em;
-  max-width: 60em;
-  text-align: center;
+  margin: 1em auto;
+  max-width: 40rem;
+  text-align: left;
+  padding: 0 2rem;
+  font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond,
+    "Times New Roman", serif;
 }
 
 #intro,
@@ -27,7 +30,8 @@ app {
 }
 
 #idea {
-  font-size: 12vw;
+  font-size: 48px;
+  text-shadow: 0 0 5px yellow;
 }
 
 .hidden,
@@ -46,16 +50,21 @@ app {
 button,
 .button {
   cursor: pointer;
-  margin: 1em auto;
+  margin: 0 auto 1em;
   display: inline-block;
   clear: left;
-  border: 1px white solid;
+  border: 1px #322 solid;
   border-radius: 1em;
-  background: black;
-  color: white;
+  background: rgba(0, 0, 0, 0.25);
+  color: #f99;
   padding: 1em 2em;
   text-decoration: none;
   font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+button:hover,
+.button:hover {
+  background: #f99;
+  color: black;
 }
 
 .spinner {
@@ -88,5 +97,23 @@ button,
   }
   50% {
     transform: scale(1);
+  }
+}
+
+@media (max-width: 420px) {
+  #idea {
+    font-size: 24px;
+  }
+
+  #description {
+    font-size: 12px;
+  }
+
+  .button,
+  button {
+    font-size: 12px;
+    display: block;
+    width: calc(100vw - 2em);
+    padding: 1em 0;
   }
 }

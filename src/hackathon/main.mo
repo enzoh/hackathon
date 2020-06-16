@@ -7,8 +7,8 @@ actor Hackthon {
   type Idea = Ideas.Idea;
   type Event = Logging.Event;
 
-  let PRNG = MathUtils.Random();
-  let Logger = Logging.Logger();
+  flexible let PRNG = MathUtils.Random();
+  flexible let Logger = Logging.Logger();
 
   public func getIdea(event : Event) : async Idea {
     let superpower = Ideas.makeIdea(PRNG.sample(Ideas.superpowerList));
