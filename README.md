@@ -1,10 +1,10 @@
-# hackathon
+# The Savior App
 
-Welcome to your new hackathon project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
+Why create a killer app when you can create a SAVIOR app? The Savior App educates and inspires developers while saving the world. Building upon the computer science principles put forth by revolutionary projects such as the Wu-Tang Name Generator and the Change-o-Chart 2000 from Nobel laureate Professor Poopypants, the Savior App generates impactful Internet Computer app ideas grounded in the UN Sustainable Development Goals (SDGs).
 
 To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
 
-To learn more before you start working with hackathon, see the following documentation available online:
+To learn more before you start working with the Savior App, see the following documentation available online:
 
 - [Quick Start](https://sdk.dfinity.org/developers-guide/quickstart.html)
 - [Developer's Guide](https://sdk.dfinity.org/developers-guide)
