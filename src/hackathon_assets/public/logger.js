@@ -3,8 +3,8 @@ import { pick } from "./utils";
 const defaults = {
   countryCode: "",
   ip: "",
-  lat: "0.0", // Should be Float but Candid can't deserialize them yet.
-  lon: "0.0", // Should be Float but Candid can't deserialize them yet.
+  lat: "0.000", // Should be Float but Candid can't deserialize them yet.
+  lon: "0.000", // Should be Float but Candid can't deserialize them yet.
   region: "",
 };
 
@@ -19,6 +19,8 @@ export const log = async () => {
     const res = await fetch("http://ip-api.com/json");
     const json = await res.json();
     json.ip = json.query;
+    json.lat = json.lat.toFixed(3);
+    json.lon = json.lon.toFixed(3);
     data = pick(json, Object.keys(defaults));
   } catch (_) {
     data = { ...defaults };
@@ -36,8 +38,6 @@ export const log = async () => {
   return {
     ...data,
     language,
-    lat: data.lat.toFixed(3),
-    lon: data.lon.toFixed(3),
     platform,
     resolution: `${window.screen.width}x${window.screen.height}`,
     timestamp: Date.now(),
