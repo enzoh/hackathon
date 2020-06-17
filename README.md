@@ -8,7 +8,7 @@ In order to successfully build canisters:
 
 - You will need to install `V0.5.8` of dfx
 - You will also need to replace `stanleyjones` with your username in `package.json`.
-- You will need to replace `0.5.7` for `0.5.8` in `dfx.json` `package-lock.json` and `package.json`.
+- You will need to replace `0.5.7` with `0.5.8` in `dfx.json` `package-lock.json` and `package.json`.
 
 To learn more before you start working with the Savior App, see the following documentation available online:
 
