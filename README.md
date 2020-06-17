@@ -16,7 +16,9 @@ If you want to start working on your project right away, you might want to try t
 cd hackathon/
 dfx start --background
 npm install
-
+dfx build --skip-frontend
+dfx build
+dfx canister install --all
 ```
 
 Supporting documentation:
