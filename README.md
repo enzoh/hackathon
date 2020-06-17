@@ -18,11 +18,28 @@ dfx start --background
 npm install
 
 ```
+
 Supporting documentation:
+
 - [Savior App Content](https://docs.google.com/document/d/1yM9cFKZsXU0uF63eZwrZ3S7Odf3Yh6Zo7Id5oIlcMNw/edit?usp=sharing)
 - [Savior App Deck](https://docs.google.com/presentation/d/1pI2lzaLSfIWAit3V_PvYkuOKwZp0cshK2teAnXuPuxk/edit?usp=sharing)
 
 References:
+
 - [Wu-Tang Name Generator](http://www.mess.be/inickgenwuname.php)
 - [Professor Poopypants Change-o-chart](https://www.scholastic.com/parents/kids-activities-and-printables/printables/reading-worksheets/whats-your-new-professor-poopypants-name.html)
 - [UN Sustainable Development Goals](https://www.un.org/sustainabledevelopment/sustainable-development-goals/)
+
+# Screenshots
+
+<p align="center">
+  <img src="https://github.com/stanleygjones/hackathon/blob/master/assets/splash.png">
+</p>
+
+<p align="center">
+  <img src="https://github.com/stanleygjones/hackathon/blob/master/assets/idea.png">
+</p>
+
+<p align="center">
+  <img src="https://github.com/stanleygjones/hackathon/blob/master/assets/description.png">
+</p>
