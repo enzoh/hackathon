@@ -27,16 +27,8 @@ References:
 - [Professor Poopypants Change-o-chart](https://www.scholastic.com/parents/kids-activities-and-printables/printables/reading-worksheets/whats-your-new-professor-poopypants-name.html)
 - [UN Sustainable Development Goals](https://www.un.org/sustainabledevelopment/sustainable-development-goals/)
 
-# Screenshots
+# Screenshot
 
 <p align="center">
-  <img src="https://github.com/stanleygjones/hackathon/blob/master/assets/splash.png">
-</p>
-
-<p align="center">
-  <img src="https://github.com/stanleygjones/hackathon/blob/master/assets/idea.png">
-</p>
-
-<p align="center">
-  <img src="https://github.com/stanleygjones/hackathon/blob/master/assets/description.png">
+  <img src="assets/description.png">
 </p>
