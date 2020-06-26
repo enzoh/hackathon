@@ -1,0 +1,16 @@
+{
+  "canisters": {
+    "hackathon": {
+      "candid_path": "/Users/stanleyjones/Developer/hackathon/canisters/hackathon/hackathon.did",
+      "canister_id": "ic:0100000000000000000000000000000000012D",
+      "timestamp": "Tue, 16 Jun 2020 21:46:36 +0000",
+      "wasm_path": "/Users/stanleyjones/Developer/hackathon/canisters/hackathon/hackathon.wasm"
+    },
+    "hackathon_assets": {
+      "candid_path": "/Users/stanleyjones/Developer/hackathon/canisters/hackathon_assets/hackathon_assets.did",
+      "canister_id": "ic:02000000000000000000000000000000000153",
+      "timestamp": "Tue, 16 Jun 2020 21:46:38 +0000",
+      "wasm_path": "/Users/stanleyjones/Developer/hackathon/canisters/hackathon_assets/hackathon_assets.wasm"
+    }
+  }
+}

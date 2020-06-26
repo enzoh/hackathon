@@ -1,13 +1,13 @@
 {
   "name": "hackathon_assets",
   "version": "0.1.0",
-  "description": "A Savior App generator for the Internet Computer",
+  "description": "A Hero App Generator for the Internet Computer",
   "keywords": [],
   "scripts": {
     "build": "webpack"
   },
   "devDependencies": {
-    "@dfinity/agent": "/Users/stanleyjones/.cache/dfinity/versions/0.5.8/js-user-library",
+    "@dfinity/agent": "~/.cache/dfinity/versions/0.5.8/js-user-library",
     "base64-inline-loader": "1.1.1",
     "css-loader": "3.6.0",
     "style-loader": "1.2.1",
