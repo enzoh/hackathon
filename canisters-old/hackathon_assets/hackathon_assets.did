@@ -1,6 +1,0 @@
-type Path = text;
-type Contents = text;
-service : {
-  "retrieve": (Path) -> (Contents) query;
-  "store": (Path, Contents) -> ();
-}
