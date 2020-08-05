@@ -1,7 +1,7 @@
 {
   "name": "hackathon_assets",
   "version": "0.1.0",
-  "description": "A Savior App generator for the Internet Computer",
+  "description": "A Hero App Generator for the Internet Computer",
   "keywords": [],
   "scripts": {
     "build": "webpack"
